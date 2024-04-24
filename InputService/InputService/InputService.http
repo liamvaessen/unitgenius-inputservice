@@ -1,0 +1,6 @@
+@InputService_HostAddress = http://localhost:5106
+
+GET {{InputService_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
