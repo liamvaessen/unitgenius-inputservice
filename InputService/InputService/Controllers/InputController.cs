@@ -1,6 +1,7 @@
 ﻿using InputService.Model;
 using InputService.Service;
 using InputService.Service.Abstraction;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace InputService.Controllers
@@ -21,6 +22,7 @@ namespace InputService.Controllers
 
         [Route("/add")]
         [HttpPost]
+        [Authorize]
         public ActionResult<InputHttpResponseBody> AddInput(InputHttpRequestBody input)
         {
             InputHttpResponseBody response = InputService.AddInput(input);
